@@ -1,0 +1,221 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
+
+import { Table } from '../../src/index';
+
+<Meta title="Components/Table" component={Table} />
+
+export const templateCodeAlwaysResponsive = `
+<Table responsive>...</Table>;`;
+
+export const templateCodeBreakpointSpec = `
+<div>
+  <Table responsive="sm">...</Table>
+  <Table responsive="md">...</Table>
+  <Table responsive="lg">...</Table>
+  <Table responsive="xl">...</Table>
+</div>;`;
+
+export const Basic = (args) => {
+  return (
+    <Table {...args}>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Username</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Jacob</td>
+          <td>Thornton</td>
+          <td>@fat</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td colSpan={2}>Larry the Bird</td>
+          <td>@twitter</td>
+        </tr>
+      </tbody>
+    </Table>
+  );
+};
+
+# Tables
+
+Use the `striped`, `bordered` and `hover` props to customise the table.
+
+<Canvas>
+  <Story name="Default">{Basic.bind({})}</Story>
+</Canvas>
+
+## API
+
+```jsx
+import { Table } from '@govtechsg/sgds-react/Table';
+```
+
+<ArgsTable story="Default" />
+
+## Small Table
+
+Use `size="sm"` to make tables compact by cutting cell padding in half.
+
+<Canvas>
+  <Story name="Small table" args={{ size: 'sm' }}>
+    {Basic.bind({})}
+  </Story>
+</Canvas>
+
+## Striped Body
+
+Adds zebra-striping using `striped` to table row within the `<tbody>`.
+
+<Canvas>
+  <Story name="Striped body" args={{ striped: true }}>
+    {Basic.bind({})}
+  </Story>
+</Canvas>
+
+## Bordered Body
+
+Use `bordered` to add borders on all sides of the table and cells.
+
+<Canvas>
+  <Story name="Bordered body" args={{ bordered: true }}>
+    {Basic.bind({})}
+  </Story>
+</Canvas>
+
+## Borderless Body
+
+Add `borderless` to remove all borders on the table and cells, including table header.
+
+<Canvas>
+  <Story name="Borderless body" args={{ borderless: true }}>
+    {Basic.bind({})}
+  </Story>
+</Canvas>
+
+## Hovered Body
+
+Use `hover` to enable a hover state on table rows within a `<tbody>`.
+
+<Canvas>
+  <Story name="Hovered body" args={{ hover: true }}>
+    {Basic.bind({})}
+  </Story>
+</Canvas>
+
+## Dark Table
+
+Use `variant="dark"` to invert the colors of the table and get light text on a dark background.
+
+<Canvas>
+  <Story name="Dark Mode" args={{ variant: 'dark' }}>
+    {Basic.bind({})}
+  </Story>
+</Canvas>
+
+## Responsive
+
+Responsive tables allow tables to be scrolled horizontally with ease.
+
+## Always Responsive
+
+Across every breakpoint, use `responsive` for horizontally scrolling tables. Responsive tables are wrapped automatically in a `div`.
+The following example has 12 columns that are scrollable horizontally.
+
+export const TableContents = (repeat) => {
+  const generateTh = Array.from({ length: repeat }).map((_, index) => (
+    <th key={index}>Table heading</th>
+  ));
+  const generateTd = Array.from({ length: repeat }).map((_, index) => (
+    <td key={index}>Table cell {index}</td>
+  ));
+  return (
+    <>
+      <thead>
+        <tr>
+          <th>#</th>
+          {generateTh}
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          {generateTd}
+        </tr>
+        <tr>
+          <td>2</td>
+          {generateTd}
+        </tr>
+        <tr>
+          <td>3</td>
+          {generateTd}
+        </tr>
+      </tbody>
+    </>
+  );
+};
+
+export const AlwaysResponsive = (args) => {
+  return <Table {...args}>{TableContents(12)}</Table>;
+};
+
+<Canvas>
+  <Story
+    name="Responsive"
+    args={{ responsive: true }}
+    parameters={{
+      docs: {
+        source: {
+          code: templateCodeAlwaysResponsive,
+        },
+        type: 'code',
+      },
+    }}
+  >
+    {AlwaysResponsive.bind({})}
+  </Story>
+</Canvas>
+
+## Breakpoint specific
+
+Use `responsive="sm"`, `responsive="md"` , `responsive="lg"`, or `responsive="xl"` as needed to create responsive tables up to a particular breakpoint.
+From that breakpoint and up, the table will behave normally and not scroll horizontally.
+
+export const BpResponsive = () => {
+  return (
+    <div>
+      <Table responsive="sm">{TableContents(6)}</Table>
+      <Table responsive="md">{TableContents(6)}</Table>
+      <Table responsive="lg">{TableContents(6)}</Table>
+      <Table responsive="xl">{TableContents(6)}</Table>
+    </div>
+  );
+};
+
+<Canvas>
+  <Story
+    name="Breakpoint Specific"
+    parameters={{
+      docs: {
+        source: {
+          code: templateCodeBreakpointSpec,
+        },
+        type: 'code',
+      },
+    }}
+  >
+    {BpResponsive.bind({})}
+  </Story>
+</Canvas>

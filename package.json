@@ -1,0 +1,115 @@
+{
+  "name": "@Alex-Kostenko/ui-filmgen-v2",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/Alex-Kostenko"
+  },
+  "version": "0.0.1",
+  "description": "storyBook",
+  "author": "Alex-Kostenko",
+  "bugs": {
+    "url": "https://github.com/Alex-Kostenko/ui-filmgen-v2/issues"
+  },
+  "homepage": "https://github.com/Alex-Kostenko/ui-filmgen-v2.git",
+  "license": "MIT",
+  "main": "dist/cjs/index.js",
+  "module": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "engines": {
+    "node": ">=12.20.0"
+  },
+  "scripts": {
+    "build": "npm run rollup && npm run post:build",
+    "post:build": "node ./scripts/frankBuild.js",
+    "rollup": "rm -rf dist && rollup -c",
+    "test": "jest --passWithNoTests",
+    "ci:test": "jest --detectOpenHandles",
+    "lint": "tsdx lint",
+    "size": "size-limit",
+    "analyze": "size-limit --why",
+    "storybook": "start-storybook -p 6006 --no-manager-cache",
+    "build-storybook": "build-storybook",
+    "prepare": "husky install"
+  },
+  "peerDependencies": {
+    "react": ">=17.0.2",
+    "react-dom": ">=17.0.2"
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.5",
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
+    "@govtechsg/sgds-masthead-react": "0.0.8",
+    "@rollup/plugin-commonjs": "^21.0.2",
+    "@rollup/plugin-node-resolve": "^13.1.3",
+    "@rollup/plugin-replace": "^4.0.0",
+    "@size-limit/preset-small-lib": "^7.0.4",
+    "@storybook/addon-a11y": "^6.4.9",
+    "@storybook/addon-essentials": "^6.4.9",
+    "@storybook/addon-info": "^5.3.21",
+    "@storybook/addon-links": "^6.4.9",
+    "@storybook/addon-storysource": "^6.4.9",
+    "@storybook/addons": "^6.4.9",
+    "@storybook/react": "^6.4.9",
+    "@testing-library/jest-dom": "^5.16.1",
+    "@testing-library/react": "^12.1.2",
+    "@types/create-react-class": "^15.6.3",
+    "@types/enzyme": "^3.10.10",
+    "@types/jest": "^27.4.1",
+    "@types/react": "^17.0.39",
+    "@types/react-dom": "^17.0.11",
+    "@types/react-transition-group": "^4.4.4",
+    "@types/sinon": "^10.0.6",
+    "@wojtekmaj/enzyme-adapter-react-17": "^0.6.6",
+    "babel-loader": "^8.2.3",
+    "bootstrap-icons": "^1.8.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "enzyme": "^3.11.0",
+    "formik": "^2.2.9",
+    "husky": "^8.0.1",
+    "jest": "^27.5.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-is": "^17.0.2",
+    "rollup": "^2.68.0",
+    "rollup-plugin-copy": "^3.4.0",
+    "rollup-plugin-generate-package-json": "^3.2.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-rename": "^1.0.1",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.34.1",
+    "sinon": "^12.0.1",
+    "size-limit": "^7.0.4",
+    "storybook-dark-mode": "^1.0.8",
+    "storybook-readme": "^5.0.9",
+    "ts-jest": "^27.1.3",
+    "tslib": "^2.3.1",
+    "typescript": "^4.5.4",
+    "yup": "^0.32.11"
+  },
+  "dependencies": {
+    "@restart/hooks": "^0.4.6",
+    "@restart/ui": "^1.2.0",
+    "@types/invariant": "^2.2.35",
+    "@types/react-transition-group": "^4.4.4",
+    "classnames": "^2.3.1",
+    "dom-helpers": "^5.2.1",
+    "invariant": "^2.2.4",
+    "prop-types": "^15.8.1",
+    "prop-types-extra": "^1.1.1",
+    "react-select": "^5.7.0",
+    "react-transition-group": "^4.4.2",
+    "rollup-plugin-import-css": "^3.1.0",
+    "warning": "^4.0.3"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
