@@ -77,5 +77,6 @@ export default [
     ],
     plugins,
     external: ['react', 'react-dom'],
+
   },
 ];
