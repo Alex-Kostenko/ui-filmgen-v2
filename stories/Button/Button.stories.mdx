@@ -1,9 +1,7 @@
 import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
 import { Button } from '../../src/index';
-import { useState, useEffect } from 'react';
-import { HIDDEN_COMMON_PROPS } from '../helpers';
 
-<Meta title="Components/Button" component={Button}/>
+<Meta title="Components/Button" component={Button} />
 
 # Buttons
 
@@ -192,7 +190,7 @@ export const Template = (args) => {
     <Button
       variant="primary"
       disabled={isLoading}
-      aria-disabled={!isLoading ? "false" : "true"}
+      aria-disabled={!isLoading ? 'false' : 'true'}
       onClick={!isLoading ? handleClick : null}
     >
       {isLoading ? 'Loading…' : 'Click to load'}
@@ -201,9 +199,13 @@ export const Template = (args) => {
 };
 
 <Canvas>
-  <Story name="Button loading state" parameters={{ docs: { source: { type: 'code' } } }}>{Template.bind({})}</Story>
+  <Story
+    name="Button loading state"
+    parameters={{ docs: { source: { type: 'code' } } }}
+  >
+    {Template.bind({})}
+  </Story>
 </Canvas>
-
 
 ## Add icon as a child component
 
