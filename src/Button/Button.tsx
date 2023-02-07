@@ -11,11 +11,7 @@ export interface ButtonProps {
 
 const Button = (props: ButtonProps) => {
   return (
-    <button
-      {...props}
-      style={{ background: 'yellow' }}
-      className={'offset ' + props.className}
-    >
+    <button {...props} className={'offset ' + props.className}>
       {props.label}
     </button>
   );

@@ -8,9 +8,16 @@ import { terser } from 'rollup-plugin-terser';
 const packageJson = require('./package.json');
 import { getFolders } from './scripts/buildUtils';
 import generatePackageJson from 'rollup-plugin-generate-package-json';
+import { babel } from '@rollup/plugin-babel';
+// import { copy } from '@web/rollup-plugin-copy';
 
 const plugins = [
   peerDepsExternal(),
+  babel({
+    babelHelpers: 'bundled',
+    plugins: ["@babel/plugin-proposal-class-properties"]
+  }),
+  css(),
   resolve(),
   replace({
     __IS_DEV__: process.env.NODE_ENV === 'development',
@@ -23,7 +30,9 @@ const plugins = [
     exclude: ["src/**/*.stories.tsx"]
   }),
   terser(),
-  css()
+  // copy({
+  //   patterns: ['../src/**/*.css'],
+  // }),
 ];
 const subfolderPlugins = (folderName) => [
   ...plugins,
