@@ -3,7 +3,7 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/Alex-Kostenko"
   },
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "storyBook",
   "author": "Alex-Kostenko",
   "bugs": {
@@ -55,13 +55,18 @@
     "@testing-library/react": "^12.1.2",
     "@types/create-react-class": "^15.6.3",
     "@types/react": "^17.0.39",
+    "@types/react-date-range": "^1.4.4",
     "@types/react-dom": "^17.0.11",
+    "@types/react-slick": "^0.23.10",
     "@types/react-transition-group": "^4.4.4",
     "babel-loader": "^8.2.3",
+    "date-fns": "^2.29.3",
     "husky": "^8.0.1",
     "react": "^17.0.2",
+    "react-date-range": "^1.4.0",
     "react-dom": "^17.0.2",
     "react-is": "^17.0.2",
+    "react-slick": "^0.29.0",
     "rollup": "^2.68.0",
     "rollup-plugin-copy": "^3.4.0",
     "rollup-plugin-generate-package-json": "^3.2.0",
@@ -70,22 +75,21 @@
     "rollup-plugin-rename": "^1.0.1",
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.34.1",
-    "typescript": "^4.5.4",
-    "date-fns": "^2.29.3",
-    "react-date-range": "^1.4.0",
-    "@types/react-date-range": "^1.4.4",
-    "react-slick": "^0.29.0",
-    "@types/react-slick": "^0.23.10",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "typescript": "^4.5.4"
   },
   "dependencies": {
     "@restart/hooks": "^0.4.6",
     "@restart/ui": "^1.2.0",
+    "@storybook/addon-postcss": "^2.0.0",
     "@types/invariant": "^2.2.35",
     "@types/react-transition-group": "^4.4.4",
     "classnames": "^2.3.1",
     "dom-helpers": "^5.2.1",
+    "postcss": "^8.4.21",
+    "postcss-flexbugs-fixes": "^5.0.2",
     "react-select": "^5.7.0",
-    "react-transition-group": "^4.4.2"
+    "react-transition-group": "^4.4.2",
+    "rollup-plugin-postcss": "^4.0.2"
   }
 }
