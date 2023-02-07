@@ -3,7 +3,7 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/Alex-Kostenko"
   },
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "storyBook",
   "author": "Alex-Kostenko",
   "bugs": {
@@ -22,9 +22,9 @@
     "post:build": "node ./scripts/frankBuild.js",
     "rollup": "rm -rf dist && rollup -c",
     "lint": "tsdx lint",
-    "storybook": "start-storybook -p 6006 --no-manager-cache",
-    "build-storybook": "build-storybook",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "peerDependencies": {
     "react": ">=17.0.2",
@@ -44,13 +44,14 @@
     "@rollup/plugin-commonjs": "^21.0.2",
     "@rollup/plugin-node-resolve": "^13.1.3",
     "@rollup/plugin-replace": "^4.0.0",
-    "@storybook/addon-a11y": "^6.4.9",
-    "@storybook/addon-essentials": "^6.4.9",
-    "@storybook/addon-info": "^5.3.21",
-    "@storybook/addon-links": "^6.4.9",
-    "@storybook/addon-storysource": "^6.4.9",
-    "@storybook/addons": "^6.4.9",
-    "@storybook/react": "^6.4.9",
+    "@storybook/addon-actions": "^6.5.16",
+    "@storybook/addon-essentials": "^6.5.16",
+    "@storybook/addon-interactions": "^6.5.16",
+    "@storybook/addon-links": "^6.5.16",
+    "@storybook/builder-webpack4": "^6.5.16",
+    "@storybook/manager-webpack4": "^6.5.16",
+    "@storybook/react": "^6.5.16",
+    "@storybook/testing-library": "^0.0.13",
     "@testing-library/react": "^12.1.2",
     "@types/create-react-class": "^15.6.3",
     "@types/react": "^17.0.39",
@@ -64,16 +65,17 @@
     "rollup": "^2.68.0",
     "rollup-plugin-copy": "^3.4.0",
     "rollup-plugin-generate-package-json": "^3.2.0",
+    "rollup-plugin-import-css": "^3.1.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-rename": "^1.0.1",
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.34.1",
-    "rollup-plugin-import-css": "^3.1.0",
     "typescript": "^4.5.4"
   },
   "dependencies": {
     "@restart/hooks": "^0.4.6",
     "@restart/ui": "^1.2.0",
+    "@rollup/plugin-typescript": "^11.0.0",
     "@types/invariant": "^2.2.35",
     "@types/react-transition-group": "^4.4.4",
     "classnames": "^2.3.1",

@@ -20,6 +20,7 @@ const plugins = [
   typescript({
     tsconfig: './tsconfig.json',
     useTsconfigDeclarationDir: true,
+    exclude: ["src/**/*.stories.tsx"]
   }),
   terser(),
   css()
