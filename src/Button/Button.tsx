@@ -1,124 +1,20 @@
-import classNames from 'classnames';
-import * as React from 'react';
-// import PropTypes from 'prop-types';
-import {
-  useButtonProps,
-  ButtonProps as BaseButtonProps,
-} from '@restart/ui/Button';
-import {
-  useBootstrapPrefix,
-  SGDSWrapper,
-} from '../ThemeProvider/ThemeProvider';
-import {
-  BsPrefixProps,
-  BsPrefixRefForwardingComponent,
-} from '../utils/helpers';
-import { ButtonVariant } from '../utils/types';
+import React from 'react'
+import './Button.css'
 
-export interface ButtonProps
-  extends BaseButtonProps,
-    Omit<BsPrefixProps, 'as'> {
-  /** Manually set the visual state of the button to `:active` */
-  active?: boolean;
-  /**
-   * One or more button variant combinations buttons may be one of a variety of visual variants such as:
-   * `'primary', 'secondary', 'success', 'danger', 'warning', 'info', 'dark', 'light', 'link'`
-   * as well as "outline" versions (prefixed by 'outline-*')
-   */
-  variant?: ButtonVariant;
-  /**Specifies a large or small button */
-  size?: 'sm' | 'lg';
+export interface ButtonProps {
+  label?: string
+  color?: string
+  onClick?: () => any
+  className?: string
+  [name: string]: any
 }
 
-// export type ButtonSize = 'sm' | 'lg';
-// export type CommonButtonProps = 'href' | 'size' | 'variant' | 'disabled';
+const Button = (props: ButtonProps) => {
+  return (
+    <button {...props} className={'offset ' + props.className}>
+      {props.label}
+    </button>
+  )
+}
 
-// const propTypes = {
-//   /**
-//    * @default 'btn'
-//    */
-//   bsPrefix: PropTypes.string,
-
-//   /**
-//    * One or more button variant combinations
-//    *
-//    * buttons may be one of a variety of visual variants such as:
-//    *
-//    * `'primary', 'secondary', 'success', 'danger', 'warning', 'info', 'dark', 'light', 'link'`
-//    *
-//    * as well as "outline" versions (prefixed by 'outline-*')
-//    *
-//    * `'outline-primary', 'outline-secondary', 'outline-success', 'outline-danger', 'outline-warning', 'outline-info', 'outline-dark', 'outline-light'`
-//    */
-//   variant: PropTypes.string,
-
-//   /**
-//    * Specifies a large or small button.
-//    *
-//    * @type ('sm'|'lg')
-//    */
-//   size: PropTypes.string,
-
-//   /** Manually set the visual state of the button to `:active` */
-//   active: PropTypes.bool,
-
-//   /**
-//    * Disables the Button, preventing mouse events,
-//    * even if the underlying component is an `<a>` element
-//    */
-//   disabled: PropTypes.bool,
-
-//   /** Providing a `href` will render an `<a>` element, _styled_ as a button. */
-//   href: PropTypes.string,
-
-//   /**
-//    * Defines HTML button type attribute.
-//    *
-//    * @default 'button'
-//    */
-//   type: PropTypes.oneOf(['button', 'reset', 'submit', null]),
-//   as: PropTypes.elementType,
-// };
-
-// const defaultProps = {
-//   variant: 'primary',
-//   active: false,
-//   disabled: false,
-// };
-
-export const Button: BsPrefixRefForwardingComponent<'button', ButtonProps> =
-  React.forwardRef<HTMLButtonElement, ButtonProps>(
-    ({ as, bsPrefix, variant, size, active, className, ...props }, ref) => {
-      const prefix = useBootstrapPrefix(bsPrefix, 'btn');
-      const [buttonProps, { tagName }] = useButtonProps({
-        tagName: as,
-        ...props,
-      });
-
-      const Component = tagName as React.ElementType;
-
-      return (
-        <SGDSWrapper
-          as={Component}
-          {...props}
-          {...buttonProps}
-          ref={ref}
-          className={classNames(
-            className,
-            prefix,
-            active && 'active',
-            variant && `${prefix}-${variant}`,
-            size && `${prefix}-${size}`,
-            props.href && props.disabled && 'disabled',
-            'dfghjnk'
-          )}
-        />
-      );
-    }
-  );
-
-// Button.displayName = 'Button';
-// Button.propTypes = propTypes;
-// Button.defaultProps = defaultProps;
-
-export default Button;
+export default Button

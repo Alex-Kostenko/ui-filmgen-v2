@@ -1,0 +1,146 @@
+.movie-card-container {
+  display: flex;
+  width: 100%;
+  height: fit-content;
+  padding-bottom: 20px;
+  font-family: 'Urbanist';
+}
+
+.movie-img {
+  max-width: 20%;
+  min-width: 250px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.description-container {
+  margin-left: 20px;
+}
+
+.description-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: flex-end;
+}
+
+.title-conteiner {
+  display: flex;
+  margin-right: 10px;
+  align-items: end;
+}
+
+.movie-title {
+  margin: 10px 0 0 0;
+  font-size: 33px;
+  color: #f33f3f;
+  user-select: none;
+  cursor: pointer;
+}
+
+.line {
+  width: 2px;
+  height: 40px;
+  margin: 0 20px;
+  background-color: #f33f3f;
+}
+
+.movie-text {
+  display: block;
+  margin: 10px 0 0 0;
+  padding-right: 5px;
+  height: 180px;
+  overflow-y: auto;
+  line-height: 1.4;
+  letter-spacing: 0.5px;
+}
+
+.movie-text::-webkit-scrollbar {
+  width: 10px;
+}
+
+.movie-text::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+.movie-text::-webkit-scrollbar-thumb {
+  background-color: #f33f3f;
+  border-radius: 20px;
+  border: 3px solid #ffffff;
+}
+
+.movie-date {
+  margin: 0px;
+  margin-top: 10px;
+  user-select: none;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0.5px;
+}
+
+.movie-tag-container {
+  display: flex;
+  margin-top: 10px;
+}
+
+.tag-medium {
+  margin: 0 5px;
+}
+
+.tag-medium:first-child {
+  margin-left: 0;
+}
+
+@media screen and (max-width: 1080px) {
+  .description-header {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .movie-card-container {
+    flex-direction: column;
+  }
+
+  .description-header {
+    flex-direction: column;
+  }
+
+  .movie-img {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+    cursor: pointer;
+  }
+
+  .title-conteiner {
+    display: block;
+    margin: 10px auto;
+  }
+
+  .movie-title {
+    font-size: 28px;
+  }
+
+  .movie-title:first-child {
+    margin-right: 20px;
+  }
+
+  .line {
+    display: none;
+  }
+
+  .movie-date {
+    display: block;
+    width: fit-content;
+    margin: 5px auto;
+  }
+
+  .movie-tag-container {
+    margin: 5px auto;
+    flex-wrap: wrap;
+  }
+  .movie-tag {
+    margin-top: 5px;
+  }
+}

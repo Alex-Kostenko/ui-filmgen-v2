@@ -70,7 +70,13 @@
     "rollup-plugin-rename": "^1.0.1",
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.34.1",
-    "typescript": "^4.5.4"
+    "typescript": "^4.5.4",
+    "date-fns": "^2.29.3",
+    "react-date-range": "^1.4.0",
+    "@types/react-date-range": "^1.4.4",
+    "react-slick": "^0.29.0",
+    "@types/react-slick": "^0.23.10",
+    "slick-carousel": "^1.8.1"
   },
   "dependencies": {
     "@restart/hooks": "^0.4.6",
