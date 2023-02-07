@@ -3,7 +3,7 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/Alex-Kostenko"
   },
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "storyBook",
   "author": "Alex-Kostenko",
   "bugs": {
