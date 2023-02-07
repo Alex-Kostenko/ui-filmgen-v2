@@ -3,7 +3,7 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/Alex-Kostenko"
   },
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "storyBook",
   "author": "Alex-Kostenko",
   "bugs": {
@@ -81,7 +81,6 @@
   "dependencies": {
     "@restart/hooks": "^0.4.6",
     "@restart/ui": "^1.2.0",
-    "@rollup/plugin-typescript": "^11.0.0",
     "@types/invariant": "^2.2.35",
     "@types/react-transition-group": "^4.4.4",
     "classnames": "^2.3.1",
