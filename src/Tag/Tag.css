@@ -17,8 +17,8 @@
 }
 
 .tag-small:hover {
-  color: #f33f3f;
-  background-color: #080808;
+  /* color: #f33f3f; */
+  background-color: #e4dada;
   transition: 0.4s;
   animation: 1.2s ease-in-out 0s normal none infinite running
     trambling-animation;
@@ -43,8 +43,8 @@
 }
 
 .tag-medium:hover {
-  color: #f33f3f;
-  background-color: #080808;
+  /* color: #f33f3f; */
+  background-color: #e4dada;
   transition: 0.4s;
   animation: 1.2s ease-in-out 0s normal none infinite running
     trambling-animation;
@@ -69,8 +69,8 @@
 }
 
 .tag-large:hover {
-  color: #f33f3f;
-  background-color: #080808;
+  /* color: #f33f3f; */
+  background-color: #e4dada;
   transition: 0.4s;
   animation: 1.2s ease-in-out 0s normal none infinite running
     trambling-animation;
