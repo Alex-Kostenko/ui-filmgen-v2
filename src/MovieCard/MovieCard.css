@@ -53,6 +53,7 @@
   overflow-y: auto;
   line-height: 1.4;
   letter-spacing: 0.5px;
+  color: #ffffff;
 }
 
 .movie-text::-webkit-scrollbar {
@@ -60,13 +61,13 @@
 }
 
 .movie-text::-webkit-scrollbar-track {
-  background: #ffffff;
+  background: #0d0d0d;
 }
 
 .movie-text::-webkit-scrollbar-thumb {
   background-color: #f33f3f;
   border-radius: 20px;
-  border: 3px solid #ffffff;
+  border: 3px solid #0d0d0d;
 }
 
 .movie-date {
@@ -76,6 +77,7 @@
   font-weight: 600;
   line-height: 1.4;
   letter-spacing: 0.5px;
+  color: #ffffff;
 }
 
 .movie-tag-container {
