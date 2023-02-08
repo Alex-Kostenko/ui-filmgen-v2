@@ -39,13 +39,19 @@
   letter-spacing: 1.3px !important;
 }
 
+.castom-select__menu-list {
+  overflow-y: visible !important;
+}
+
 .castom-select__menu {
   margin: 0 !important;
   width: 180px !important;
   box-shadow: none !important;
   letter-spacing: 1.2px !important;
+  background: #e4dada !important;
   border: 2px solid #f33f3f;
   border-radius: 0 !important;
+  overflow: hidden;
 }
 
 .castom-select__option {
@@ -57,7 +63,6 @@
 }
 
 .castom-select__option:hover {
-  width: 166px !important;
   background-color: #080808 !important;
   transition: 0.25s !important;
   transform: translate(10px, 0);
