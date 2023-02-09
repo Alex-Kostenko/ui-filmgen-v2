@@ -4,15 +4,15 @@ import { Tag } from '../Tag';
 import './MovieCard.css';
 
 export interface MovieCardProps {
-  titleEng?: string;
-  titleRus?: string;
+  title?: string;
+  subtitle?: string;
   description?: string;
   date: string;
   img: string;
   onClick?: () => any;
   className?: string;
   labels?: Array<string>;
-  link: any;
+  action?: () => void;
 }
 
 const MovieCard = (props: MovieCardProps) => {
@@ -21,19 +21,19 @@ const MovieCard = (props: MovieCardProps) => {
       <div {...props} className={'movie-card-container ' + props.className}>
         <img
           className="movie-img"
-          onClick={props.link}
+          onClick={props.action}
           src={props.img}
           alt="img"
         />
         <div className="description-container">
           <div className="description-header">
             <div className="title-conteiner">
-              <h1 className="movie-title" onClick={props.link}>
-                {props.titleEng}
+              <h1 className="movie-title" onClick={props.action}>
+                {props.title}
               </h1>
               <div className="line"></div>
-              <h1 className="movie-title" onClick={props.link}>
-                {props.titleRus}
+              <h1 className="movie-title" onClick={props.action}>
+                {props.subtitle}
               </h1>
             </div>
             <div className="movie-tag-container">
