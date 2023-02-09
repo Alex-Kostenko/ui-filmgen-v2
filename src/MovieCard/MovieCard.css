@@ -32,7 +32,7 @@
 
 .movie-title {
   margin: 10px 0 0 0;
-  font-size: 33px;
+  font-size: 30px;
   color: #f33f3f;
   user-select: none;
   cursor: pointer;
@@ -75,8 +75,7 @@
   margin-top: 10px;
   user-select: none;
   font-weight: 600;
-  line-height: 1.4;
-  letter-spacing: 0.5px;
+  letter-spacing: 2px;
   color: #ffffff;
 }
 
@@ -85,11 +84,11 @@
   margin-top: 10px;
 }
 
-.tag-medium {
+.tag-small {
   margin: 0 5px;
 }
 
-.tag-medium:first-child {
+.tag-small:first-child {
   margin-left: 0;
 }
 

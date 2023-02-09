@@ -12,14 +12,14 @@
   background-color: #f33f3f;
   font-family: 'Urbanist';
   cursor: pointer;
-  transition: 0.4s;
+  transition: 0.2s;
   user-select: none;
 }
 
 .tag-small:hover {
   color: #f33f3f;
-  background-color: #080808;
-  transition: 0.4s;
+  background-color: rgb(13, 13, 13);
+  transition: 0.2s;
   animation: 1.2s ease-in-out 0s normal none infinite running
     trambling-animation;
 }
@@ -38,14 +38,14 @@
   background-color: #f33f3f;
   font-family: 'Urbanist';
   cursor: pointer;
-  transition: 0.4s;
+  transition: 0.2s;
   user-select: none;
 }
 
 .tag-medium:hover {
   color: #f33f3f;
-  background-color: #080808;
-  transition: 0.4s;
+  background-color: rgb(13, 13, 13);
+  transition: 0.2s;
   animation: 1.2s ease-in-out 0s normal none infinite running
     trambling-animation;
 }
@@ -64,14 +64,14 @@
   background-color: #f33f3f;
   font-family: 'Urbanist';
   cursor: pointer;
-  transition: 0.4s;
+  transition: 0.2s;
   user-select: none;
 }
 
 .tag-large:hover {
   color: #f33f3f;
-  background-color: #080808;
-  transition: 0.4s;
+  background-color: rgb(13, 13, 13);
+  transition: 0.2s;
   animation: 1.2s ease-in-out 0s normal none infinite running
     trambling-animation;
 }

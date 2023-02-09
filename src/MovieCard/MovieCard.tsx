@@ -12,23 +12,33 @@ export interface MovieCardProps {
   onClick?: () => any;
   className?: string;
   labels?: Array<string>;
+  link: any;
 }
 
 const MovieCard = (props: MovieCardProps) => {
   return (
     <div className="wrapper">
       <div {...props} className={'movie-card-container ' + props.className}>
-        <img className="movie-img" src={props.img} alt="img" />
+        <img
+          className="movie-img"
+          onClick={props.link}
+          src={props.img}
+          alt="img"
+        />
         <div className="description-container">
           <div className="description-header">
             <div className="title-conteiner">
-              <h1 className="movie-title">{props.titleEng}</h1>
+              <h1 className="movie-title" onClick={props.link}>
+                {props.titleEng}
+              </h1>
               <div className="line"></div>
-              <h1 className="movie-title">{props.titleRus}</h1>
+              <h1 className="movie-title" onClick={props.link}>
+                {props.titleRus}
+              </h1>
             </div>
             <div className="movie-tag-container">
               {props.labels?.map((label, index) => (
-                <Tag className="tag-medium" key={index} label={label} />
+                <Tag className="tag-small" key={index} label={label} />
               ))}
             </div>
           </div>
