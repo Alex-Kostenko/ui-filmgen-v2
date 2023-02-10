@@ -4,6 +4,8 @@
   outline: auto 0px;
 }
 .inputBox {
+  box-sizing: border-box;
+  height: 38px;
   font-weight: 700;
   font-family: 'Urbanist';
   padding: 11px 0px;

@@ -17,18 +17,18 @@
 
 // Primary.args = {
 //   img: <img src="/simpleLeft.svg" alt="my image" />,
-//   dateForSlider: [
-//     {
-//       description: 'cit odun',
-//       img: <img src="http://placekitten.com/g/400/201" />,
-//     },
-//     {
-//       description: 'cit dwa',
-//       img: <img src="http://placekitten.com/g/400/200" />,
-//     },
-//     {
-//       description: 'cit tru',
-//       img: <img src="http://placekitten.com/g/400/204" />,
-//     },
-//   ],
+// dateForSlider: [
+//   {
+//     description: 'cit odun',
+//     img: <img src="http://placekitten.com/g/400/201" />,
+//   },
+//   {
+//     description: 'cit dwa',
+//     img: <img src="http://placekitten.com/g/400/200" />,
+//   },
+//   {
+//     description: 'cit tru',
+//     img: <img src="http://placekitten.com/g/400/204" />,
+//   },
+// ],
 // };
