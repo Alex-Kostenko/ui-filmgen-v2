@@ -11,17 +11,20 @@
   #080808 */
 
 .offset {
+  box-sizing: border-box;
   box-shadow: 0 0 0 0 #f33f3f, inset 6em 3.5em 0 0 #f33f3f;
   font-size: 16px;
   font-weight: 700;
   font-family: 'Urbanist';
   transition: 0.25s;
   color: #fff;
-  padding: 16px 32px;
+  padding: 0px 32px;
   margin: 8px;
   border: 2px solid #f33f3f;
   background: none;
   line-height: 1;
+  height: 38px;
+  width: 195px;
 }
 .offset:hover,
 .offset:focus {
