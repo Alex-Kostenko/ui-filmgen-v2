@@ -27,7 +27,7 @@
 .title-conteiner {
   display: flex;
   margin-right: 10px;
-  align-items: end;
+  align-items: flex-end;
 }
 
 .movie-title {
