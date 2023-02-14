@@ -6,7 +6,7 @@ import 'react-date-range/dist/theme/default.css';
 import './DatePicker.css';
 
 export interface DatePickerProps {
-  className?: string;
+  className?: string | any;
 }
 
 const DatePicker = (props: DatePickerProps) => {

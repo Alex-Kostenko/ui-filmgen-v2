@@ -8,7 +8,7 @@ type IOptions = {
 };
 
 export interface SelectProps {
-  onChange?: () => any;
+  onChange?: any;
   className?: string;
   [name: string]: any;
   options?: Array<IOptions>;

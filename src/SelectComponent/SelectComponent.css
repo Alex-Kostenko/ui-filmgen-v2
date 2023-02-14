@@ -3,13 +3,28 @@
   height: 38px !important;
   border: none !important;
   border-radius: 0 !important;
-  font-family: 'Urbanist' !important;
-  font-weight: 700 !important;
   cursor: pointer !important;
   box-shadow: none !important;
-  transition: 0.4s !important;
-  background-color: #f33f3f !important;
   letter-spacing: 1.3px !important;
+
+  box-sizing: border-box !important;
+  box-shadow: 0 0 0 0 #f33f3f, inset 6em 3.5em 0 0 #f33f3f !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  font-family: 'Urbanist' !important;
+  transition: 0.25s !important;
+  color: #fff !important;
+  border: 2px solid #f33f3f !important;
+  background: none !important;
+  line-height: 1 !important;
+}
+
+.castom-select__control:hover,
+.castom-select__control:focus {
+  box-shadow: 0.3em 0.3em 0 0 #e4dada, inset 0.3em 0.3em 0 0 #e4dada !important;
+  cursor: pointer !important;
+  color: #ffffff !important;
+  border-color: #1f1f1f !important;
 }
 
 .castom-select__input-container {
@@ -19,10 +34,10 @@
 }
 
 .castom-select__control--is-focused {
-  background-color: #f33f3f !important;
-  transition: 0.4s !important;
-  border: none !important;
-  border-radius: 0 !important;
+  box-shadow: 0.1em 0.1em 0 0 #e4dada, inset 0.1em 0.1em 0 0 #e4dada !important;
+  cursor: pointer !important;
+  color: #ffffff !important;
+  border-color: #1f1f1f !important;
 }
 
 .css-tj5bde-Svg {
@@ -52,7 +67,7 @@
   box-shadow: none !important;
   letter-spacing: 1.2px !important;
   background: #e4dada !important;
-  border: 2px solid #f33f3f;
+  border: 2px solid #e4dada;
   border-radius: 0 !important;
   overflow: hidden;
 }
@@ -68,5 +83,6 @@
 .castom-select__option:hover {
   background-color: #080808 !important;
   transition: 0.25s !important;
-  transform: translate(10px, 0);
+  transform: translate(10px, 0) !important;
+  color: #fff !important;
 }
