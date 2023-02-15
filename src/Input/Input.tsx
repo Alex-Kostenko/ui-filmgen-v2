@@ -1,14 +1,11 @@
 import React, { useState } from 'react';
 import './Input.css';
 
-// export interface ButtonProps {
-//   label?: string
-//   onClick?: () => any
-//   className?: string
-//   [name: string]: any
-// }
-// eslint-disable-next-line
-const Input = () => {
+export interface InputProps {
+  label?: any;
+}
+
+const Input = (props: InputProps) => {
   const [value, setValue] = useState('');
 
   return (
@@ -20,7 +17,7 @@ const Input = () => {
         placeholder=""
         onChange={(e) => setValue(e.target.value)}
       />
-      {value.length === 0 && <label>Search...</label>}
+      {value.length === 0 && <label>{props.label}</label>}
       <span className="focus-border">
         <i></i>
       </span>
