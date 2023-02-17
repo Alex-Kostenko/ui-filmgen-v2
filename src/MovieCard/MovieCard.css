@@ -38,6 +38,11 @@
   cursor: pointer;
 }
 
+.movie-title_rus {
+  font-family: 'Acherus';
+  height: 37px;
+}
+
 .line {
   width: 2px;
   height: 40px;
