@@ -86,3 +86,9 @@
   transform: translate(10px, 0) !important;
   color: #fff !important;
 }
+
+@media (max-width: 750px) {
+  .castom-select__menu {
+    width: 250px !important;
+  }
+}
