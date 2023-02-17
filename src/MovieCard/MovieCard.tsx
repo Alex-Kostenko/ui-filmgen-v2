@@ -41,7 +41,10 @@ const MovieCard = (props: MovieCardProps) => {
                 {props.title}
               </h1>
               <div className="line"></div>
-              <h1 className="movie-title" onClick={props.action}>
+              <h1
+                className="movie-title movie-title_rus"
+                onClick={props.action}
+              >
                 {props.subtitle}
               </h1>
             </div>
