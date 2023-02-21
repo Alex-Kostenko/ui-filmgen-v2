@@ -37,10 +37,12 @@ const MovieCard = (props: MovieCardProps) => {
         <div className="description-container">
           <div className="description-header">
             <div className="title-conteiner">
-              <h1 className="movie-title" onClick={props.action}>
+              <h1
+                className="movie-title movie-title_eng"
+                onClick={props.action}
+              >
                 {props.title}
               </h1>
-              <div className="line"></div>
               <h1
                 className="movie-title movie-title_rus"
                 onClick={props.action}

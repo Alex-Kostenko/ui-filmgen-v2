@@ -38,23 +38,23 @@
   cursor: pointer;
 }
 
-.movie-title_rus {
-  font-family: 'Acherus';
-  height: 37px;
+.movie-title_eng {
+  margin-right: 15px;
+  padding-right: 15px;
+  letter-spacing: 1.5px;
+  border-right: 2px solid #f33f3f;
 }
 
-.line {
-  width: 2px;
-  height: 40px;
-  margin: 0 20px;
-  background-color: #f33f3f;
+.movie-title_rus {
+  font-family: 'Noah';
 }
 
 .movie-text {
   display: block;
+  max-width: 90%;
+  max-height: 250px;
   margin: 10px 0 0 0;
   padding-right: 5px;
-  height: 180px;
   overflow-y: auto;
   line-height: 1.4;
   letter-spacing: 0.5px;
