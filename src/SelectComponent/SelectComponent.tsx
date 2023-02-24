@@ -1,7 +1,6 @@
 import React from 'react';
 import Select from 'react-select';
 import './SelectComponent.css';
-import { components } from 'react-select';
 
 type IOptions = {
   value: string;
@@ -14,24 +13,10 @@ export interface SelectProps {
   [name: string]: any;
   options?: Array<IOptions>;
   placeholder?: string;
+  multi?: boolean;
+  closeMenu?: boolean;
+  checkbox?: any;
 }
-
-const Option = (props: any) => {
-  return (
-    <div>
-      <components.Option {...props}>
-        <input
-          className="checkbox"
-          type="checkbox"
-          checked={props.isSelected}
-          onChange={() => null}
-        />
-        <span className="checkbox_span"></span>
-        <label className="lable">{props.label}</label>
-      </components.Option>
-    </div>
-  );
-};
 
 const SelectComponent = (props: SelectProps) => {
   return (
@@ -41,11 +26,9 @@ const SelectComponent = (props: SelectProps) => {
       {...props}
       className={'mainSelectStyle ' + props.className}
       options={props.options}
-      components={{
-        Option,
-      }}
-      isMulti
-      closeMenuOnSelect={false}
+      components={props.checkbox}
+      isMulti={props.multi}
+      closeMenuOnSelect={props.closeMenu}
       hideSelectedOptions={false}
       controlShouldRenderValue={false}
       captureMenuScroll={false}
