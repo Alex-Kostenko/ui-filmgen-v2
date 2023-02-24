@@ -48,6 +48,7 @@ const SelectComponent = (props: SelectProps) => {
       closeMenuOnSelect={false}
       hideSelectedOptions={false}
       controlShouldRenderValue={false}
+      captureMenuScroll={false}
       // menuIsOpen={true}
     />
   );
