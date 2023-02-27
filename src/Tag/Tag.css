@@ -18,7 +18,7 @@
 
 .tag-small:hover {
   color: #f33f3f;
-  background-color: rgb(13, 13, 13);
+  background-color: inherit;
   transition: 0.2s;
   animation: 1.2s ease-in-out 0s normal none infinite running
     trambling-animation;
@@ -44,7 +44,7 @@
 
 .tag-medium:hover {
   color: #f33f3f;
-  background-color: rgb(13, 13, 13);
+  background-color: inherit;
   transition: 0.2s;
   animation: 1.2s ease-in-out 0s normal none infinite running
     trambling-animation;
@@ -70,7 +70,7 @@
 
 .tag-large:hover {
   color: #f33f3f;
-  background-color: rgb(13, 13, 13);
+  background-color: inherit;
   transition: 0.2s;
   animation: 1.2s ease-in-out 0s normal none infinite running
     trambling-animation;
