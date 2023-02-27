@@ -34,13 +34,16 @@
 
 .movie-title_eng {
   letter-spacing: 1.5px;
-  margin-bottom: 10px;
+  margin-bottom: 3px;
 }
 
 .movie-title_rus {
+  font-size: 16px;
+  letter-spacing: 0.5px;
   padding-top: 5px;
   border-top: 1px solid rgb(243, 63, 63, 20%);
   font-family: 'Roboto';
+  color: #ffffff;
 }
 
 .movie-text {
