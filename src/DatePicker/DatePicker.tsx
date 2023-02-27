@@ -12,8 +12,8 @@ export interface DatePickerProps {
 const DatePicker = (props: DatePickerProps) => {
   const [range, setRange] = useState([
     {
-      startDate: new Date(),
-      endDate: addDays(new Date(), 7),
+      startDate: addDays(new Date(), -1),
+      endDate: new Date(),
       key: 'selection',
     },
   ]);
