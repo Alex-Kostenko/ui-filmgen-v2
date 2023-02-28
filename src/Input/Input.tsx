@@ -3,6 +3,7 @@ import './Input.css';
 
 export interface InputProps {
   label?: any;
+  onBlur: any;
 }
 
 const Input = (props: InputProps) => {
@@ -16,6 +17,7 @@ const Input = (props: InputProps) => {
         value={value}
         placeholder=""
         onChange={(e) => setValue(e.target.value)}
+        onBlur={props.onBlur}
       />
       {value.length === 0 && <label>{props.label}</label>}
       <span className="focus-border">
