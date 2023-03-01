@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import Select from 'react-select';
 import './SelectComponent.css';
 
@@ -16,21 +16,32 @@ export interface SelectProps {
   multi?: boolean;
   closeMenu?: boolean;
   checkbox?: any;
+  hideSelected?: boolean;
 }
 
-const SelectComponent = (props: SelectProps) => {
+const SelectComponent: FC<SelectProps> = (props) => {
+  const {
+    hideSelected = false,
+    placeholder,
+    className,
+    multi,
+    checkbox,
+    options,
+    closeMenu,
+  } = props;
+
   return (
     <Select
-      placeholder={props.placeholder}
+      placeholder={placeholder}
       classNamePrefix="castom-select"
       {...props}
-      className={'mainSelectStyle ' + props.className}
-      options={props.options}
-      components={props.checkbox}
-      isMulti={props.multi}
-      closeMenuOnSelect={props.closeMenu}
+      className={'mainSelectStyle ' + className}
+      options={options}
+      components={checkbox}
+      isMulti={multi}
+      closeMenuOnSelect={closeMenu}
       hideSelectedOptions={false}
-      controlShouldRenderValue={false}
+      controlShouldRenderValue={hideSelected}
       captureMenuScroll={false}
       // menuIsOpen={true}
     />
