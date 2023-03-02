@@ -3,7 +3,7 @@ import './Input.css';
 
 export interface InputProps {
   label?: any;
-  value: any;
+  value?: any;
   [name: string]: any;
 }
 
