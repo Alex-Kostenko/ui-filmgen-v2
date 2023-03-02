@@ -7,6 +7,7 @@ import './DatePicker.css';
 
 export interface DatePickerProps {
   className?: string | any;
+  to: any;
 }
 
 const DatePicker = (props: DatePickerProps) => {
@@ -46,7 +47,7 @@ const DatePicker = (props: DatePickerProps) => {
     <div className={'calendarWrap ' + props.className}>
       <input
         ref={valueRef}
-        value={`${format(range[0].startDate, 'dd/yyyy')} to ${format(
+        value={`${format(range[0].startDate, 'dd/yyyy')} ${props.to} ${format(
           range[0].endDate,
           'dd/yyyy'
         )}`}

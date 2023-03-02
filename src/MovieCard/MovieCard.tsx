@@ -13,6 +13,7 @@ export interface MovieCardProps {
   className?: string;
   labels?: Array<string>;
   action?: () => void;
+  release?: any;
 }
 
 const MovieCard = (props: MovieCardProps) => {
@@ -56,7 +57,9 @@ const MovieCard = (props: MovieCardProps) => {
               ))}
             </div>
           </div>
-          <p className="movie-date">Release date: {props.date}</p>
+          <p className="movie-date">
+            {props.release}: {props.date}
+          </p>
           <p className="movie-text">{props.description}</p>
         </div>
       </div>
