@@ -125,8 +125,9 @@
 [type='checkbox']:checked + span:before {
   content: '\2714';
   position: absolute;
-  top: -3px;
-  left: 2px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-40%, -50%);
   font-size: 15px;
   color: #f33f3f;
 }
