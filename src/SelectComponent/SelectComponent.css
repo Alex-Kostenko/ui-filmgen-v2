@@ -102,10 +102,10 @@
 }
 
 .castom-select__option:hover {
-  background-color: #080808 !important;
+  /* background-color: #080808 !important; */
   transition: 0.25s !important;
   transform: translate(10px, 0) !important;
-  color: #fff !important;
+  /* color: #fff !important; */
 }
 
 .checkbox {
@@ -126,8 +126,8 @@
   content: '\2714';
   position: absolute;
   top: -3px;
-  left: 1px;
-  font-size: 11px;
+  left: 2px;
+  font-size: 15px;
   color: #f33f3f;
 }
 

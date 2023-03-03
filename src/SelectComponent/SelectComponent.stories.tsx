@@ -1,8 +1,27 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import React from 'react';
+import { components } from 'react-select';
 
 import Select from './SelectComponent';
+
 import './SelectComponent.css';
+
+const Option = (props: any) => {
+  return (
+    <div>
+      <components.Option {...props}>
+        <input
+          className="checkbox"
+          type="checkbox"
+          checked={props.isSelected}
+          onChange={() => null}
+        />
+        <span className="checkbox_span"></span>
+        <label className="lable">{props.label}</label>
+      </components.Option>
+    </div>
+  );
+};
 
 export default {
   title: 'UI/Select',
@@ -14,9 +33,10 @@ const Template: ComponentStory<typeof Select> = (args) => <Select {...args} />;
 export const Primary = Template.bind({});
 
 Primary.args = {
+  closeMenu: false,
+  checkbox: { Option },
   placeholder: 'Select',
-  // eslint-disable-next-line
-  onChange: () => console.log('1'),
+  multi: true,
   options: [
     { value: '1', label: 'телевизионный фильм' },
     { value: '2', label: 'драмма' },
