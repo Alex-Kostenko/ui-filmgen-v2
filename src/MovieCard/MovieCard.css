@@ -28,7 +28,6 @@
 .movie-title {
   font-size: 30px;
   color: #f33f3f;
-  user-select: none;
   cursor: pointer;
 }
 
@@ -74,7 +73,6 @@
 .movie-date {
   margin: 0px;
   margin-top: 5px;
-  user-select: none;
   font-weight: 600;
   letter-spacing: 2px;
   color: #ffffff;
@@ -107,6 +105,8 @@
 
   .description-header {
     flex-direction: column;
+    align-items: center;
+    margin: 10px 0;
   }
 
   .movie-img {
@@ -138,10 +138,10 @@
   }
 
   .movie-tag-container {
-    margin: 5px auto;
+    margin: 10px auto;
     flex-wrap: wrap;
   }
-  .movie-tag {
-    margin-top: 5px;
+  .tag-small {
+    margin: 10px 10px 0 0;
   }
 }

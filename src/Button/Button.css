@@ -25,6 +25,7 @@
   line-height: 1;
   height: 38px;
   width: 195px;
+  user-select: none;
 }
 .offset:hover,
 .offset:focus {

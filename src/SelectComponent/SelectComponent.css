@@ -16,6 +16,7 @@
   border: 2px solid #f33f3f !important;
   background: none !important;
   line-height: 1 !important;
+  user-select: none !important;
 }
 
 .castom-select__control:hover,
@@ -61,7 +62,7 @@
 }
 
 .castom-select__menu {
-  width: 180px !important;
+  width: 100% !important;
   max-height: 210px !important;
   margin: 0 !important;
   box-shadow: none !important;
@@ -131,35 +132,3 @@
   font-size: 15px;
   color: #f33f3f;
 }
-
-@media (max-width: 968px) {
-  .castom-select__menu {
-    width: 340px !important;
-  }
-}
-
-@media (max-width: 600px) {
-  .castom-select__menu {
-    width: 260px !important;
-  }
-}
-
-/* .castom-select__value-container {
-  flex-wrap: nowrap !important;
-}
-
-.castom-select__multi-value__label {
-  max-width: 40px !important;
-  padding: 2px !important;
-  margin: 0 !important;
-  font-size: 10px !important;
-  background-color: #f33f3f;
-  text-overflow: clip !important;
-  color: #fff !important;
-}
-
-.castom-select__multi-value__remove {
-  padding: 0 !important;
-  margin: 0 !important;
-  background-color: #f33f3f;
-} */
