@@ -11,11 +11,7 @@ export interface InputProps {
 const Input = (props: InputProps) => {
   const reff: any = useRef(null);
 
-  setTimeout(() => {
-    if (reff.current.defaultValue != null) {
-      reff.current.defaultValue = props.searchTerm;
-    }
-  }, 300);
+  const { value = '', searchTerm = '' } = props;
 
   return (
     <div className="wrapperInput input-effect">
@@ -24,13 +20,16 @@ const Input = (props: InputProps) => {
         type="text"
         ref={reff}
         className="mainInput"
-        value={props.value}
+        defaultValue={searchTerm}
+        value={value}
       />
-      {props.value.length === 0 && props.searchTerm.length === 0 ? (
-        <label className="mainlabel">{props.label}</label>
-      ) : (
-        <label className="mainlabel secondMainlabel">{props.label}</label>
-      )}
+      <label
+        className={`mainlabel ${
+          value.length !== 0 && searchTerm !== '' && 'secondMainlabel'
+        }`}
+      >
+        {props.label}
+      </label>
       <span className="focus-border">
         <i></i>
       </span>
