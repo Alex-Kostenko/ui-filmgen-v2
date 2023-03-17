@@ -10,7 +10,7 @@ export interface TagProps {
 const Tag = (props: TagProps) => {
   return (
     <div {...props} className={props.className}>
-      #{props.label}
+      <span onClick={props.onClick} className="tag_cross" />#{props.label}
     </div>
   );
 };
