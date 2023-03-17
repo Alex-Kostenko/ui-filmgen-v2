@@ -11,7 +11,6 @@
   color: #ffffff;
   background-color: #f33f3f;
   font-family: 'Urbanist';
-  cursor: pointer;
   transition: 0.2s;
   user-select: none;
 }
@@ -38,37 +37,52 @@
   color: #ffffff;
   background-color: #f33f3f;
   font-family: 'Urbanist';
-  cursor: pointer;
   transition: 0.2s;
   user-select: none;
 }
 
+.tag-search {
+  position: relative;
+  display: flex;
+  width: fit-content;
+  height: 28px;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15px 0 10px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1.6px;
+  color: #ffffff;
+  background-color: #f33f3f;
+  font-family: 'Urbanist';
+  transition: 0.2s;
+  user-select: none;
+}
+
+.tag-search:hover {
+  color: #f33f3f;
+  background-color: inherit;
+  transition: 0.2s;
+  animation: 1.2s ease-in-out 0s normal none infinite running
+    trambling-animation;
+}
+
 .tag_cross {
   position: absolute;
+  font-size: 9px;
   top: 0;
   right: 0;
-  width: 12px;
-  height: 12px;
+  width: 15px;
+  height: 15px;
+  text-align: center;
+  cursor: pointer;
+  color: white;
+  fill: white;
 }
 
-.tag_cross::before {
-  content: '';
-  position: absolute;
-  top: 5px;
-  right: 2px;
-  width: 6px;
-  border: 0.5px solid white;
-  transform: rotate(45deg);
-}
-
-.tag_cross::after {
-  content: '';
-  position: absolute;
-  top: 5px;
-  right: 2px;
-  width: 6px;
-  border: 0.5px solid white;
-  transform: rotate(-45deg);
+.tag-search:hover .tag_cross {
+  color: #f33f3f;
+  fill: #f33f3f;
 }
 
 .tag-medium:hover {
@@ -92,7 +106,6 @@
   color: #ffffff;
   background-color: #f33f3f;
   font-family: 'Urbanist';
-  cursor: pointer;
   transition: 0.2s;
   user-select: none;
 }
