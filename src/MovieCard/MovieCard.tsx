@@ -4,52 +4,57 @@ import { Tag } from '../Tag';
 import './MovieCard.css';
 
 export interface MovieCardProps {
-  title?: string;
-  subtitle?: string;
-  description?: string;
+  title: string;
+  subtitle: string;
+  description: string;
   date: string;
   img: string;
-  onClick?: () => any;
   className?: string;
-  labels?: Array<string>;
-  action?: () => void;
-  release?: any;
+  labels: Array<string>;
+  release: any;
+  movieId: any;
 }
 
 const MovieCard = (props: MovieCardProps) => {
   return (
     <div className="wrapper">
-      <div {...props} className={'movie-card-container ' + props.className}>
+      <div className={'movie-card-container ' + props.className}>
         {props.img ? (
-          <img
-            className="movie-img"
-            onClick={props.action}
-            src={props.img}
-            alt="img"
-          />
+          <a
+            href={`/aboutFilm/${props.movieId}`}
+            style={{ textDecoration: 'none' }}
+          >
+            <img className="movie-img" src={props.img} alt="img" />
+          </a>
         ) : (
-          <img
-            className="movie-img"
-            onClick={props.action}
-            src="https://media.istockphoto.com/id/1357365823/vector/default-image-icon-vector-missing-picture-page-for-website-design-or-mobile-app-no-photo.jpg?s=612x612&w=0&k=20&c=PM_optEhHBTZkuJQLlCjLz-v3zzxp-1mpNQZsdjrbns="
-            alt="img"
-          />
+          <a
+            href={`/aboutFilm/${props.movieId}`}
+            style={{ textDecoration: 'none' }}
+          >
+            <img
+              className="movie-img"
+              src="https://media.istockphoto.com/id/1357365823/vector/default-image-icon-vector-missing-picture-page-for-website-design-or-mobile-app-no-photo.jpg?s=612x612&w=0&k=20&c=PM_optEhHBTZkuJQLlCjLz-v3zzxp-1mpNQZsdjrbns="
+              alt="img"
+            />
+          </a>
         )}
         <div className="description-container">
           <div className="description-header">
             <div>
-              <h1
-                className="movie-title movie-title_eng"
-                onClick={props.action}
+              <a
+                href={`/aboutFilm/${props.movieId}`}
+                style={{ textDecoration: 'none' }}
               >
-                {props.title}
-              </h1>
-              <h1
-                className="movie-title movie-title_rus"
-                onClick={props.action}
+                <h1 className="movie-title movie-title_eng">{props.title}</h1>
+              </a>
+              <a
+                href={`/aboutFilm/${props.movieId}`}
+                style={{ textDecoration: 'none' }}
               >
-                {props.subtitle}
-              </h1>
+                <h1 className="movie-title movie-title_rus">
+                  {props.subtitle}
+                </h1>
+              </a>
             </div>
             <div className="movie-tag-container">
               {props.labels?.map((label, index) => (

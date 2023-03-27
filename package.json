@@ -1,6 +1,6 @@
 {
   "name": "alex-unicode",
-  "version": "0.0.57",
+  "version": "0.0.58",
   "description": "storyBook",
   "author": "Alex-Kostenko",
   "bugs": {
@@ -17,7 +17,7 @@
   "scripts": {
     "build": "npm run rollup && npm run post:build",
     "post:build": "node ./scripts/frankBuild.js",
-    "rollup": "rm -rf dist && rollup -c",
+    "rollup": "del dist && rollup -c",
     "lint": "tsdx lint",
     "prepare": "husky install",
     "storybook": "start-storybook -p 6006",
