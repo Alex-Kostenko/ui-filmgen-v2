@@ -2,17 +2,12 @@ import React, { FC } from 'react';
 import Select from 'react-select';
 import './SelectComponent.css';
 
-type IOptions = {
-  value: string;
-  label: string;
-};
-
 export interface SelectProps {
   onChange?: any;
   className?: string;
   [name: string]: any;
-  options?: Array<IOptions>;
-  placeholder?: string;
+  options?: any;
+  placeholder?: any;
   multi?: boolean;
   closeMenu?: boolean;
   checkbox?: any;
