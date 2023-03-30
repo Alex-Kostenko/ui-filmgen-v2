@@ -6,6 +6,7 @@ export interface InputProps {
   value?: any;
   [name: string]: any;
   inputType: string;
+  class?: string;
 }
 
 const Input = (props: InputProps) => {
@@ -16,7 +17,7 @@ const Input = (props: InputProps) => {
       <input
         {...props}
         type={props.inputType}
-        className="mainInput"
+        className={`mainInput ${props.class}`}
         value={value}
       />
       <label className={`mainlabel ${value.length !== 0 && 'secondMainlabel'}`}>
