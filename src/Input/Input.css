@@ -106,3 +106,12 @@ input[type='text'] {
   letter-spacing: 1px;
   height: 38px;
 }
+
+input[type='password'] {
+  font: 15px/24px 'Lato', Arial, sans-serif;
+  color: #ffffff;
+  width: 100%;
+  box-sizing: border-box;
+  letter-spacing: 1px;
+  height: 38px;
+}

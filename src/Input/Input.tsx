@@ -5,6 +5,7 @@ export interface InputProps {
   label?: any;
   value?: any;
   [name: string]: any;
+  inputType: string;
 }
 
 const Input = (props: InputProps) => {
@@ -12,7 +13,12 @@ const Input = (props: InputProps) => {
 
   return (
     <div className="wrapperInput input-effect">
-      <input {...props} type="text" className="mainInput" value={value} />
+      <input
+        {...props}
+        type={props.inputType}
+        className="mainInput"
+        value={value}
+      />
       <label className={`mainlabel ${value.length !== 0 && 'secondMainlabel'}`}>
         {props.label}
       </label>
