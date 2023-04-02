@@ -2,7 +2,7 @@ import React from 'react';
 import './Button.css';
 
 export interface ButtonProps {
-  buttonText?: any;
+  value?: any;
   color?: string;
   onClick?: () => any;
   className?: string;
@@ -12,7 +12,7 @@ export interface ButtonProps {
 const Button = (props: ButtonProps) => {
   return (
     <button {...props} className={'offset ' + props.className}>
-      {props.buttonText}
+      {props.value}
     </button>
   );
 };
