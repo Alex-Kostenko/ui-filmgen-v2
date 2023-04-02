@@ -20,11 +20,19 @@ const MovieCard = (props: MovieCardProps) => {
     <div className="wrapper">
       <div className={'movie-card-container ' + props.className}>
         {props.img ? (
-          <a className="movie-link-img" href={`/aboutFilm/${props.movieId}`}>
+          <a
+            className="movie-link-img"
+            aria-label="go to the detailed description of the film"
+            href={`/aboutFilm/${props.movieId}`}
+          >
             <img className="movie-img" src={props.img} alt="img" />
           </a>
         ) : (
-          <a className="movie-link-img" href={`/aboutFilm/${props.movieId}`}>
+          <a
+            aria-label="go to the detailed description of the film"
+            className="movie-link-img"
+            href={`/aboutFilm/${props.movieId}`}
+          >
             <img
               className="movie-img"
               src="https://media.istockphoto.com/id/1357365823/vector/default-image-icon-vector-missing-picture-page-for-website-design-or-mobile-app-no-photo.jpg?s=612x612&w=0&k=20&c=PM_optEhHBTZkuJQLlCjLz-v3zzxp-1mpNQZsdjrbns="
@@ -36,12 +44,14 @@ const MovieCard = (props: MovieCardProps) => {
           <div className="description-header">
             <div>
               <a
+                aria-label="go to the detailed description of the film"
                 href={`/aboutFilm/${props.movieId}`}
                 style={{ textDecoration: 'none' }}
               >
                 <h1 className="movie-title movie-title_eng">{props.title}</h1>
               </a>
               <a
+                aria-label="go to the detailed description of the film"
                 href={`/aboutFilm/${props.movieId}`}
                 style={{ textDecoration: 'none' }}
               >
