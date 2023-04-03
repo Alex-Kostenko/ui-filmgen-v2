@@ -1,7 +1,7 @@
 import React from 'react';
 import './Input.css';
 
-export interface InputProps {
+interface IInput extends React.InputHTMLAttributes<HTMLInputElement> {
   label?: any;
   value?: any;
   inputType: string;
@@ -11,12 +11,23 @@ export interface InputProps {
   disabled?: any;
 }
 
-const Input = (props: InputProps) => {
+// export interface InputProps {
+//   label?: any;
+//   value?: any;
+//   inputType: string;
+//   class?: string;
+//   onChange?: any;
+//   onBlur?: any;
+//   disabled?: any;
+// }
+
+const Input = (props: IInput) => {
   const { value = '' } = props;
 
   return (
     <div className="wrapperInput input-effect">
       <input
+        {...props}
         disabled={props.disabled}
         onChange={props.onChange}
         onBlur={props.onBlur}
