@@ -4,9 +4,10 @@ import './Input.css';
 export interface InputProps {
   label?: any;
   value?: any;
-  [name: string]: any;
   inputType: string;
   class?: string;
+  onChange?: any;
+  onBlur?: any;
 }
 
 const Input = (props: InputProps) => {
@@ -15,7 +16,8 @@ const Input = (props: InputProps) => {
   return (
     <div className="wrapperInput input-effect">
       <input
-        {...props}
+        onChange={props.onChange}
+        onBlur={props.onBlur}
         type={props.inputType}
         className={`mainInput ${props.class}`}
         value={value}
