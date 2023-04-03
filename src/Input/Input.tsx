@@ -8,6 +8,7 @@ export interface InputProps {
   class?: string;
   onChange?: any;
   onBlur?: any;
+  disabled?: any;
 }
 
 const Input = (props: InputProps) => {
@@ -16,6 +17,7 @@ const Input = (props: InputProps) => {
   return (
     <div className="wrapperInput input-effect">
       <input
+        disabled={props.disabled}
         onChange={props.onChange}
         onBlur={props.onBlur}
         type={props.inputType}
