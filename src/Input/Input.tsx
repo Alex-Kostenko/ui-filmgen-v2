@@ -11,16 +11,6 @@ interface IInput extends React.InputHTMLAttributes<HTMLInputElement> {
   disabled?: any;
 }
 
-// export interface InputProps {
-//   label?: any;
-//   value?: any;
-//   inputType: string;
-//   class?: string;
-//   onChange?: any;
-//   onBlur?: any;
-//   disabled?: any;
-// }
-
 const Input = (props: IInput) => {
   const { value = '' } = props;
 
