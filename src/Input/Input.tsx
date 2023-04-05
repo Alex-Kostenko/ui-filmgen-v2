@@ -1,14 +1,14 @@
-import React, { ChangeEvent, FocusEvent } from 'react';
+import React from 'react';
 import './Input.css';
 
 interface IInput extends React.InputHTMLAttributes<HTMLInputElement> {
-  label?: string | null;
-  value?: string;
+  label?: any;
+  value?: any;
   inputType: string;
-  class?: string;
-  onChange: (event: ChangeEvent<HTMLInputElement>) => void;
-  onBlur?: (event: FocusEvent<HTMLInputElement>) => void;
-  disabled?: boolean;
+  className?: string;
+  onChange?: any;
+  onBlur?: any;
+  disabled?: any;
 }
 
 const Input = (props: IInput) => {
@@ -22,7 +22,7 @@ const Input = (props: IInput) => {
         onChange={props.onChange}
         onBlur={props.onBlur}
         type={props.inputType}
-        className={`mainInput ${props.class}`}
+        className={`mainInput ${props.className}`}
         value={value}
       />
       <label className={`mainlabel ${value.length !== 0 && 'secondMainlabel'}`}>
