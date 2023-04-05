@@ -1,14 +1,14 @@
-import React from 'react';
+import React, { ChangeEvent, FocusEvent } from 'react';
 import './Input.css';
 
 interface IInput extends React.InputHTMLAttributes<HTMLInputElement> {
-  label?: any;
-  value?: any;
+  label?: string | null;
+  value?: string;
   inputType: string;
   class?: string;
-  onChange?: any;
-  onBlur?: any;
-  disabled?: any;
+  onChange: (event: ChangeEvent<HTMLInputElement>) => void;
+  onBlur?: (event: FocusEvent<HTMLInputElement>) => void;
+  disabled?: boolean;
 }
 
 const Input = (props: IInput) => {
