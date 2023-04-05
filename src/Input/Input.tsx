@@ -2,8 +2,8 @@ import React, { ChangeEvent, FocusEvent } from 'react';
 import './Input.css';
 
 interface IInput extends React.InputHTMLAttributes<HTMLInputElement> {
-  label?: string | null;
-  value?: string;
+  label?: any;
+  value?: any;
   inputType: string;
   className?: string;
   onChange: (event: ChangeEvent<HTMLInputElement>) => void;
