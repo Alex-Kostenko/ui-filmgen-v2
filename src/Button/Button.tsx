@@ -2,9 +2,8 @@ import React from 'react';
 import './Button.css';
 
 export interface ButtonProps {
-  value?: any;
+  value: string;
   color?: string;
-  onClick?: () => any;
   className?: string;
   [name: string]: any;
 }
