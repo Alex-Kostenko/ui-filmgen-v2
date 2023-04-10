@@ -8,7 +8,7 @@ export interface MovieCardProps {
   subtitle: string;
   description: string;
   date: string;
-  img: string | null;
+  img: string | undefined;
   className?: string;
   labels: Array<string>;
   release: any;
