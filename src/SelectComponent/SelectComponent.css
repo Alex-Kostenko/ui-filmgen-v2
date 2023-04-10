@@ -46,6 +46,7 @@
 
 .castom-select__placeholder {
   color: #ffffff !important;
+  margin: 0 auto !important;
 }
 
 .castom-select__indicator-separator {
