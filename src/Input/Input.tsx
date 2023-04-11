@@ -10,6 +10,7 @@ interface IInput extends React.InputHTMLAttributes<HTMLInputElement> {
   onBlur?: (event: FocusEvent<HTMLInputElement>) => void;
   disabled?: boolean;
   error?: boolean;
+  autoCompleteOff?: boolean;
 }
 
 const Input = (props: IInput) => {
@@ -28,6 +29,7 @@ const Input = (props: IInput) => {
         style={
           props.error ? { borderColor: '#f33f3f' } : { borderColor: '#e4dada' }
         }
+        autoComplete={props.autoCompleteOff ? 'new-password' : 'on'}
       />
       <label className={`mainlabel ${value.length !== 0 && 'secondMainlabel'}`}>
         {props.label}
