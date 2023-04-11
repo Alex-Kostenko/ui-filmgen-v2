@@ -9,6 +9,7 @@ interface IInput extends React.InputHTMLAttributes<HTMLInputElement> {
   onChange: (event: ChangeEvent<HTMLInputElement>) => void;
   onBlur?: (event: FocusEvent<HTMLInputElement>) => void;
   disabled?: boolean;
+  error?: boolean;
 }
 
 const Input = (props: IInput) => {
@@ -24,6 +25,9 @@ const Input = (props: IInput) => {
         type={props.inputType}
         className={`mainInput ${props.className}`}
         value={value}
+        style={
+          props.error ? { borderColor: '#f33f3f' } : { borderColor: '#e4dada' }
+        }
       />
       <label className={`mainlabel ${value.length !== 0 && 'secondMainlabel'}`}>
         {props.label}
